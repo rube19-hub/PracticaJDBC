@@ -1,0 +1,139 @@
+1.¿Cuál es la capital de Australia?
+A. Sídney.
+B. Melbourne.
+C. Canberra.
+D. Perth.
+ANSWER: C
+
+2.¿Cuál es la capital de Canadá?
+A. Toronto.
+B. Vancouver.
+C. Montreal.
+D. Ottawa.
+ANSWER: D
+
+3.¿Cuál es la capital de Brasil?
+A. Río de Janeiro.
+B. São Paulo.
+C. Brasilia.
+D. Salvador.
+ANSWER: C
+
+4.¿Cuál es la capital de Sudáfrica?
+A. Johannesburgo.
+B. Ciudad del Cabo.
+C. Pretoria.
+D. Durban.
+ANSWER: C
+
+5.¿Cuál es la capital de Japón?
+A. Osaka.
+B. Tokio.
+C. Kioto.
+D. Hiroshima.
+ANSWER: B
+
+6.¿Cuál es la capital de Egipto?
+A. Alejandría.
+B. El Cairo.
+C. Giza.
+D. Luxor.
+ANSWER: B
+
+7.¿Cuál es la capital de Alemania?
+A. Berlín.
+B. Múnich.
+C. Hamburgo.
+D. Frankfurt.
+ANSWER: A
+
+8.¿Cuál es la capital de México?
+A. Guadalajara.
+B. Monterrey.
+C. Ciudad de México.
+D. Puebla.
+ANSWER: C
+
+9.¿Cuál es la capital de Argentina?
+A. Córdoba.
+B. Rosario.
+C. Buenos Aires.
+D. Mendoza.
+ANSWER: C
+
+10.¿Cuál es la capital de Rusia?
+A. San Petersburgo.
+B. Moscú.
+C. Novosibirsk.
+D. Kazán.
+ANSWER: B
+
+11.¿Cuál es la capital de Francia?
+A. Lyon.
+B. Marsella.
+C. París.
+D. Niza.
+ANSWER: C
+
+12.¿Cuál es la capital de Italia?
+A. Milán.
+B. Venecia.
+C. Roma.
+D. Florencia.
+ANSWER: C
+
+13.¿Cuál es la capital de España?
+A. Barcelona.
+B. Sevilla.
+C. Valencia.
+D. Madrid.
+ANSWER: D
+
+14.¿Cuál es la capital de China?
+A. Shanghái.
+B. Pekín (Beijing).
+C. Cantón.
+D. Shenzhen.
+ANSWER: B
+
+15.¿Cuál es la capital de India?
+A. Bombay.
+B. Calcuta.
+C. Nueva Delhi.
+D. Bangalore.
+ANSWER: C
+
+16.¿Cuál es la capital de Noruega?
+A. Bergen.
+B. Oslo.
+C. Trondheim.
+D. Stavanger.
+ANSWER: B
+
+17.¿Cuál es la capital de Grecia?
+A. Tesalónica.
+B. Creta.
+C. Atenas.
+D. Rodas.
+ANSWER: C
+
+18.¿Cuál es la capital de Turquía?
+A. Estambul.
+B. Ankara.
+C. Esmirna.
+D. Bursa.
+ANSWER: B
+
+19.¿Cuál es la capital de Portugal?
+A. Oporto.
+B. Lisboa.
+C. Faro.
+D. Coimbra.
+ANSWER: B
+
+20.¿Cuál es la capital de Suecia?
+A. Gotemburgo.
+B. Malmö.
+C. Estocolmo.
+D. Upsala.
+ANSWER: C

@@ -6,7 +6,8 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/bd_entreno?useSSl=false&serverTimezone=UTC";
+    //nombre de la bd: practicajdbc
+    private static final String URL = "jdbc:mysql://localhost:3306/practicajdbc?useSSl=false&serverTimezone=UTC";
 
     private static final String USER = "root";
 
@@ -14,15 +15,37 @@ public class DBConnection {
 
     private static Connection connection = null;
 
-    private DBConnection(){
+    private DBConnection(){     //TODO="porque esta esto aqui"
 
     }
 
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()){
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            try {
+                connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                System.out.println("Esta conectado");
+            }catch (SQLException e){
+                System.out.println("Error al conectar");
+            }
         }
-        System.out.println("Esta conectado");
         return connection;
+    }
+
+//    public static void probarConexion(){
+//        try {
+//            Connection conexion = DBConnection.getConnection();
+//        }catch (SQLException e){
+//
+//        }
+//    }
+
+    public static void closeConnection(){
+
+        try {
+            connection.close();
+            System.out.println("Conexion cerrada");
+        }catch (SQLException e){
+            System.out.println("Error al cerrar la conexion");
+        }
     }
 }

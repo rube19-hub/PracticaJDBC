@@ -10,15 +10,18 @@ public class ServicioFichero {
 
     public static ListaPreguntas convertirATipoPregunta(List<String> listaPreguntasString) {
 
+        int id = 0;
         String enunciado = "";
         String correcta = "";
-        String[] opciones = new String[4];
+        //String[] opciones = new String[4];        //TODO= porque se me guarda solo las opciones de la ultima pregunta
         String espacioBlanco = "";
 
         ArrayList<Pregunta> preguntasI = new ArrayList<>();
         ListaPreguntas listaLlenaPreguntas = new ListaPreguntas(preguntasI);
 
         for (int i = 0; i + 6 < listaPreguntasString.size(); i+=7) {
+
+            String[] opciones = new String[4];
 
             enunciado = listaPreguntasString.get(i);
             //System.out.println(enunciado);
@@ -41,21 +44,15 @@ public class ServicioFichero {
             espacioBlanco = listaPreguntasString.get(i+6);
             //System.out.println(espacioBlanco);
 
-            Pregunta pregunta = new Pregunta(enunciado,opciones, correcta) ;
+            Pregunta pregunta = new Pregunta(id, enunciado,opciones, correcta) ;
 
             preguntasI.add(pregunta);
 
         }
 
-        System.out.println(listaLlenaPreguntas);
+        //System.out.println(listaLlenaPreguntas);
         return listaLlenaPreguntas;
     }
 
 
-
-
-
-    private static void procesarLinea(String linea) {
-
-    }
 }

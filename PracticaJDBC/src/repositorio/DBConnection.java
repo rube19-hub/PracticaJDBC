@@ -30,15 +30,7 @@ public class DBConnection {
         }
         return connection;
     }
-
-//    public static void probarConexion(){
-//        try {
-//            Connection conexion = DBConnection.getConnection();
-//        }catch (SQLException e){
-//
-//        }
-//    }
-
+    
     public static void closeConnection(){
 
         try {

@@ -4,14 +4,24 @@ import java.util.Arrays;
 
 public class Pregunta {
 
+    private int id;
     private String enunciado ;
     private String[] opciones;
     private String correcta;
 
-    public Pregunta(String enunciado, String[] opciones, String correcta ) {
+    public Pregunta(int id, String enunciado, String[] opciones, String correcta) {
+        this.id = id;
         this.enunciado = enunciado;
         this.opciones = opciones;
         this.correcta = correcta;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getEnunciado() {
@@ -29,6 +39,7 @@ public class Pregunta {
     public void setOpciones(String[] opciones) {
         this.opciones = opciones;
     }
+
     public String getCorrecta() {
         return correcta;
     }
@@ -37,16 +48,16 @@ public class Pregunta {
         this.correcta = correcta;
     }
 
-
-
     @Override
     public String toString() {
         return "Pregunta{" +
-                "enunciado='" + enunciado + '\'' +
+                "id='" + id + '\'' +
+                ", enunciado=" + enunciado +
                 ", opciones='" + Arrays.toString(opciones) + '\'' +
                 ", correcta=" + correcta +
                 '}';
     }
+
     //    public String toSQL(){
 //
 //    }

@@ -15,7 +15,7 @@ public class DBConnection {
 
     private static Connection connection = null;
 
-    private DBConnection(){     //TODO="porque esta esto aqui"
+    private DBConnection(){
 
     }
 

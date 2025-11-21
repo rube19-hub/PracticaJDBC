@@ -18,14 +18,6 @@ public class Controlador {
         Fichero miFichero = new Fichero("src/repositorio/Preguntas.txt");
         List<String> listaPreguntasString = miFichero.leerFichero();
 
-        /*Parte del SQL - conecta a la bd*/
-//        try {
-//            DBConnection.getConnection();
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-        /////////////////////////////////////
-
         //le entra un lista de strings y crea y devuelve una lista de preguntas
         ListaPreguntas tipoPreguntas = convertirATipoPregunta(listaPreguntasString);
 
@@ -44,14 +36,13 @@ public class Controlador {
         try {
             listaConRandom = Sql.selectPreguntasAleatorias(numerin);
         } catch (SQLException e) {
-            System.err.println("CAPTURADA EXCEPCIÓN:");
+            System.err.println("Excepción capturada: ");
             e.printStackTrace();
         }
 
         //al usuario le van apareciendo las preguntas y las va resolviendo
         Consola.resolverPregunta(listaConRandom);
-
-
+        
         //cierra la conexion
         DBConnection.closeConnection();
     }

@@ -57,8 +57,4 @@ public class Pregunta {
                 ", correcta=" + correcta +
                 '}';
     }
-
-    //    public String toSQL(){
-//
-//    }
 }

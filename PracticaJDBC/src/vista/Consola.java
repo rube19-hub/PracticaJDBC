@@ -8,7 +8,6 @@ public class Consola {
     public static int pedirNumeroPreguntas(){
 
         int numeroPreguntas = Escaner.leerEntero("Elige el número de preguntas que quieres: ");
-
         return numeroPreguntas;
     }
 

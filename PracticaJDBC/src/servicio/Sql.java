@@ -28,12 +28,11 @@ public class Sql {
 //        }
         return datos;
     }
-/*
-"SELECT * FROM preguntas ORDER BY RAND() LIMIT " + numeroPreguntas + ";";
-    SELECT P.ID, P.ENUNCIADO, P.CORRECTA, R.OPCION_A, R.OPCION_B, R.OPCION_C, R.OPCION_D, R.PREGUNTA_ID ORDER BY RAND() LIMIT " + numeroPreguntas + ";"
-    FROM PREGUNTAS P INNER JOIN RESPUESTAS R
-    ON P.ID = R.PREGUNTA_ID
-*/
+
+    // Recibe el número de preguntas que el usuario quiere. A partir de este número, hago una sentencia sql que selecciona
+    // tantas preguntas de forma aleatoria. Después de seleccionar las preguntas en la base de datos, voy creando
+    // preguntas
+
     public static ListaPreguntas selectPreguntasAleatorias(int numeroPreguntas) throws SQLException {
 
         Connection conn = null;
@@ -44,13 +43,11 @@ public class Sql {
                      "ORDER BY RAND() LIMIT " + numeroPreguntas + ";";
 
         ArrayList<Pregunta> listilla = new ArrayList<>();
-        //ListaPreguntas preguntasAleatorias = new ListaPreguntas(listilla);
 
         int id;
         String enunciado = "";
         String correcta = "";
-
-        Pregunta pregunta = null;
+        String[] opciones;
 
         try {
             conn = DBConnection.getConnection();
@@ -59,7 +56,7 @@ public class Sql {
 
             while (rst.next()) {
 
-                String[] opciones = new String[4];
+                opciones = new String[4];
 
                 id = rst.getInt("ID");
                 enunciado = rst.getString("ENUNCIADO");
@@ -69,17 +66,14 @@ public class Sql {
                 opciones[2] = rst.getString("OPCION_C");
                 opciones[3] = rst.getString("OPCION_D");
 
-                pregunta = new Pregunta(id, enunciado, opciones, correcta);
-                listilla.add(pregunta);
+                listilla.add(new Pregunta(id, enunciado, opciones, correcta));
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         }
-        //ListaPreguntas preguntasAleatorias = new ListaPreguntas(listilla);
         return new ListaPreguntas(listilla);
     }
-
 
     public static List<String> generarInsert(ListaPreguntas listaLLPreguntas) {
         ArrayList<String> listaInsert = new ArrayList<>();
@@ -88,21 +82,15 @@ public class Sql {
 
             sql = String.format("INSERT INTO PREGUNTAS (ID, ENUNCIADO, CORRECTA) VALUES ('%d', '%s', '%s')",
                     item.getId(), item.getEnunciado(), item.getCorrecta());
-            //System.out.println(sql);
             listaInsert.add(sql);
-            //System.out.println(sql);
 
             sql = String.format("INSERT INTO RESPUESTAS (OPCION_A, OPCION_B, OPCION_C, OPCION_D) VALUES ('%s', '%s', '%s', '%s')",
                     item.getOpciones()[0], item.getOpciones()[1], item.getOpciones()[2], item.getOpciones()[3]);
 
-                                                        //TODO= en el insert tengo que poner tambien el id
             listaInsert.add(sql);
-            //System.out.println(sql);
         }
         return listaInsert;
     }
-
-
 
     public static void enviarALaBd(List<String> listaInsert){
         try {
@@ -121,8 +109,4 @@ public class Sql {
             e.printStackTrace();
         }
     }
-
-    //SELECT * FROM preguntas ORDER BY RAND() LIMIT 3;
-
-
 }

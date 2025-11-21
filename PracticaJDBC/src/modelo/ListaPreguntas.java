@@ -10,10 +10,6 @@ public class ListaPreguntas {
         this.lista = lista;
     }
 
-    //(ArrayList<Pregunta> lista)
-                                     //TODO="igual se puede quitar el parametro en el constructor"
-
-
     public ArrayList<Pregunta> getLista() {
         return lista;
     }
@@ -28,6 +24,4 @@ public class ListaPreguntas {
                 "lista=" + lista +
                 '}';
     }
-    //ListaPreguntas miLista = new ListaPreguntas();
-
 }
